@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1></h1>
+       <form id="formUpdateUser" name="update" method="post" action="/update?user=<%=userlist[0].username%>">
+         <input id="inputUserName" type="text" placeholder="username" name="username" value="<%=userlist[0].username%>"/>
+         <input id="inputUserEmail" type="text" placeholder="email" name="useremail" value="<%=userlist[0].email%>"/>
+         <button id="btnSubmit" type="submit">Update</button>
+       </form>
+  </body>
+</html>

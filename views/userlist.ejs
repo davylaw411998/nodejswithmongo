@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>User List</h1>
+    <h2><a href="/newuser">Insert user</a></h2>
+    <table>
+  <tr>
+    <th>User</th>
+    <th>Email</th>
+  </tr>
+
+    <% for (i = 0; i < userlist.length; i++)
+     { %>
+       <tr>
+       <td><%=userlist[i].username%></td>
+       <td><%=userlist[i].email%></td>
+       <td><a href="/userdetail?user=<%=userlist[i].username%>"><button type="button">Update</button></a>
+       <td><a href="/delete?user=<%=userlist[i].username%>"><button type="button">Delete</button></a>
+       </tr>
+    <% } %>
+</table>
+  </body>
+</html>
